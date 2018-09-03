@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="4b7882ec-22ad-4c52-a329-74bf0a17c217" Publisher="CN=Joseph" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>yavc.Metro</DisplayName>
+    <PublisherDisplayName>Joseph</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="yavc.Metro.App">
+      <VisualElements DisplayName="Yamaha AV Controller" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="This app allows you to control your Yamaha Network Receiver. You can change the volume, select inputs &amp; scenes and change the sound settings." ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="noLogos" WideLogo="Assets\WideLogo.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="black" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

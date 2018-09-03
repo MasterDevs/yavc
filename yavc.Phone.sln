@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yavc.Phone", "yavc.Phone\yavc.Phone\yavc.Phone.csproj", "{6C0F21C0-03C6-4785-BF3E-8FE019C9122D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yavc.Phone.Lib", "yavc.Phone\yavc.Phone.Lib\yavc.Phone.Lib.csproj", "{97CB4CA5-A1F7-420A-952B-4FE6441C8C16}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs10
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = yavc.Phone\\yavc.Phone\\yavc.Phone.csproj
+		SccProjectName1 = yavc.Phone/yavc.Phone
+		SccLocalPath1 = yavc.Phone\\yavc.Phone
+		SccProjectUniqueName2 = yavc.Phone\\yavc.Phone.Lib\\yavc.Phone.Lib.csproj
+		SccProjectName2 = yavc.Phone/yavc.Phone.Lib
+		SccLocalPath2 = yavc.Phone\\yavc.Phone.Lib
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C0F21C0-03C6-4785-BF3E-8FE019C9122D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0F21C0-03C6-4785-BF3E-8FE019C9122D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0F21C0-03C6-4785-BF3E-8FE019C9122D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6C0F21C0-03C6-4785-BF3E-8FE019C9122D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0F21C0-03C6-4785-BF3E-8FE019C9122D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0F21C0-03C6-4785-BF3E-8FE019C9122D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{97CB4CA5-A1F7-420A-952B-4FE6441C8C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97CB4CA5-A1F7-420A-952B-4FE6441C8C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97CB4CA5-A1F7-420A-952B-4FE6441C8C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97CB4CA5-A1F7-420A-952B-4FE6441C8C16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CCEDB88-0B47-4792-BC42-8431DDFCFA9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>yavc.Base</RootNamespace>
+    <AssemblyName>yavc.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile95</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADeviceFinder.cs" />
+    <Compile Include="AFactory.cs" />
+    <Compile Include="AImageCache.cs" />
+    <Compile Include="Commands\ACommand.cs" />
+    <Compile Include="Commands\AZoneCommand.cs" />
+    <Compile Include="Commands\List\CanList.cs" />
+    <Compile Include="Commands\List\GetList.cs" />
+    <Compile Include="Commands\List\JumpList.cs" />
+    <Compile Include="Commands\List\ListItem.cs" />
+    <Compile Include="Commands\List\ListMenuUp.cs" />
+    <Compile Include="Commands\List\ListRequests.cs" />
+    <Compile Include="Commands\List\SelectCurrentListItem.cs" />
+    <Compile Include="Commands\Media\Playback.cs" />
+    <Compile Include="Commands\Media\PlayInfo.cs" />
+    <Compile Include="Commands\Media\Skip.cs" />
+    <Compile Include="Commands\PartyMode.cs" />
+    <Compile Include="Commands\PureDirect.cs" />
+    <Compile Include="Commands\RefreshZone.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Data\Device.cs" />
+    <Compile Include="Data\Source.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="IFindDevice.cs" />
+    <Compile Include="IStringHelper.cs" />
+    <Compile Include="IUIThread.cs" />
+    <Compile Include="IXmlIsoFileStorage.cs" />
+    <Compile Include="IImageCache.cs" />
+    <Compile Include="IMessageBox.cs" />
+    <Compile Include="IProcessRequest.cs" />
+    <Compile Include="Commands\yavcMethod.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\RequestInfo.cs" />
+    <Compile Include="Commands\SelectInput.cs" />
+    <Compile Include="Commands\SelectScene.cs" />
+    <Compile Include="Commands\SelectSurround.cs" />
+    <Compile Include="Commands\SendResult.cs" />
+    <Compile Include="Commands\SystemInfo.cs" />
+    <Compile Include="Commands\ToggleMute.cs" />
+    <Compile Include="Commands\TogglePower.cs" />
+    <Compile Include="Commands\UpdateVolume.cs" />
+    <Compile Include="Commands\ZoneStatus.cs" />
+    <Compile Include="Data\Input.cs" />
+    <Compile Include="Data\Media\MediaState.cs" />
+    <Compile Include="Data\Media\Song.cs" />
+    <Compile Include="Data\Scene.cs" />
+    <Compile Include="Data\Surround.cs" />
+    <Compile Include="Data\Volume.cs" />
+    <Compile Include="Data\Zone.cs" />
+    <Compile Include="IController.cs" />
+    <Compile Include="ITileService.cs" />
+    <Compile Include="Models\AVM.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\SelectionMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\VMDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\VMList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\VMMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\VMPlayback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\VMSelectable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\VMStart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\VMVolume.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\VMZone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsers\SystemInfoParser.cs" />
+    <Compile Include="Parsers\ZoneParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestState.cs" />
+    <Compile Include="SessionManager.cs" />
+    <Compile Include="Util\ANotifiable.cs" />
+    <Compile Include="Util\Extensions.cs" />
+    <Compile Include="Util\String.cs" />
+    <Compile Include="Util\UriExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BitmapImage DecodePixelHeight="12" DecodePixelWidth="12" UriSource="..\Images\Disabled.png" x:Key="IMG_DISABLED" />
+    <BitmapImage DecodePixelHeight="24" DecodePixelWidth="24" UriSource="..\Images\DSP.png" x:Key="IMG_DSP" />
+    <BitmapImage DecodePixelHeight="24" DecodePixelWidth="24" UriSource="..\Images\Inputs.png" x:Key="IMG_INPUTS" />
+    <BitmapImage DecodePixelHeight="48" DecodePixelWidth="48" UriSource="..\Images\On.png" x:Key="IMG_ON" />
+    <BitmapImage DecodePixelHeight="48" DecodePixelWidth="48" UriSource="..\Images\OnOff.png" x:Key="IMG_ONOFF" />
+    <BitmapImage DecodePixelHeight="48" DecodePixelWidth="48" UriSource="..\Images\Off.png" x:Key="IMG_OFF" />
+    <BitmapImage DecodePixelHeight="48" DecodePixelWidth="48" UriSource="..\Images\Refresh.png" x:Key="IMG_REFRESH" />
+    <BitmapImage DecodePixelHeight="24" DecodePixelWidth="24" UriSource="..\Images\SCENE.png" x:Key="IMG_SCENE" />
+    <BitmapImage DecodePixelHeight="24" DecodePixelWidth="24" UriSource="..\Images\Speaker.png" x:Key="IMG_SPEAKER" />
+    <BitmapImage DecodePixelHeight="24" DecodePixelWidth="24" UriSource="..\Images\Zones.png" x:Key="IMG_ZONES" />
+</ResourceDictionary>

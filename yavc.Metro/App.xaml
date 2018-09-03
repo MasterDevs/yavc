@@ -1,0 +1,88 @@
+﻿<Application
+    x:Class="yavc.Metro.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:yavc.Metro"
+    xmlns:conv="using:yavc.Metro.Converters">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <SolidColorBrush x:Key="MetroAccentBrush" Color="{Binding Color, Source={StaticResource ComboBoxSelectedPointerOverBackgroundThemeBrush}}" />
+            <!--<SolidColorBrush x:Key="MetroBackgroundBrush" Color="{Binding Color, Source={StaticResource AppBarBackgroundThemeBrush}}" />
+            <SolidColorBrush x:Key="MetroForegroundBrush" Color="{Binding Color, Source={StaticResource ApplicationForegroundThemeBrush}}" />
+            <SolidColorBrush x:Key="MetroChromeBrush" Color="{Binding Color, Source={StaticResource ToolTipForegroundThemeBrush}}" />
+            <SolidColorBrush x:Key="MetroDisabledBrush" Color="{Binding Color, Source={StaticResource ComboBoxItemDisabledForegroundThemeBrush}}" />
+            <SolidColorBrush x:Key="MetroSubtleBrush" Color="LightGray" />-->
+            
+            <!--<SolidColorBrush x:Key="MetroAccentBrush" Color="#FFFFCC00" />-->
+            <SolidColorBrush x:Key="MetroBackgroundBrush" Color="Black" />
+            <SolidColorBrush x:Key="MetroForegroundBrush" Color="White" />
+            <SolidColorBrush x:Key="MetroChromeBrush" Color="Gray" />
+            <SolidColorBrush x:Key="MetroDisabledBrush" Color="DarkGray" />
+            <SolidColorBrush x:Key="MetroSubtleBrush" Color="LightGray" />
+
+            <TextBlock x:Key="btn1" Foreground="{StaticResource ApplicationForegroundThemeBrush}" />
+
+            <Style x:Key="MetroClearButtonStyle" TargetType="Button">
+                <Setter Property="BorderBrush" Value="Transparent" />
+            </Style>
+
+            <conv:ScaleValue x:Key="BaseValue" Value="5" />
+            
+            <x:Double x:Key="DefaultFullScreenLandscapeScale">5</x:Double>
+            
+            <conv:ScaleConverter x:Key="margScale" BaseValue="0.1" />
+            <conv:ScaleConverter x:Key="hwScale" BaseValue=".5" />
+            <conv:ScaleConverter x:Key="TextScale"  BaseValue="3" />
+            <conv:ScaleConverter x:Key="convMetroTitleFontSize" BaseValue="7" />
+            <conv:ScaleConverter x:Key="convMetroTextLargeFontSize" BaseValue="5" />
+            <conv:ScaleConverter x:Key="convMetroTextMediumFontSize" BaseValue="4" />
+            <conv:ScaleConverter x:Key="convMetroTextSmallFontSize" BaseValue="3" />
+            
+            <x:Double x:Key="MetroTitleFontSize">6</x:Double>
+            <x:Double x:Key="MetroTextLargeFontSize">4</x:Double>
+            <x:Double x:Key="MetroTextMediumFontSize">3</x:Double>
+            <x:Double x:Key="MetroTextSmallFontSize">2.5</x:Double>
+
+            <Style x:Key="MetroTextBase" TargetType="TextBlock">
+                <Setter Property="Margin" Value="20,10" />
+                <Setter Property="Foreground" Value="{StaticResource MetroForegroundBrush}" />
+            </Style>
+            
+            <conv:ImageCacheConverter x:Key="imgConv" />
+            
+            <conv:ColorBooleanConverter x:Key="colBool" 
+                                    DefaultColor="{StaticResource MetroForegroundBrush}" 
+                                    FalseColor="{StaticResource MetroForegroundBrush}"
+                                    TrueColor="{StaticResource MetroAccentBrush}" />
+            
+            <conv:ColorBooleanConverter x:Key="colBoolPowerButton"
+                                    DefaultColor="{StaticResource MetroDisabledBrush}"
+                                    FalseColor="{StaticResource MetroDisabledBrush}"
+                                    TrueColor="{StaticResource MetroAccentBrush}" />
+            
+            <conv:ColorBooleanConverter x:Key="foregroundIsEnabledBrushConv"
+                                    DefaultColor="{StaticResource MetroForegroundBrush}"
+                                    TrueColor="{StaticResource MetroForegroundBrush}"
+                                    FalseColor="{StaticResource MetroDisabledBrush}" />
+            
+            <conv:VisibilityBooleanConverter x:Key="truVis" TrueVisibility="Visible" FalseVisibility="Collapsed" DefaultVisibility="Collapsed" />
+            <conv:VisibilityBooleanConverter x:Key="falseVis" TrueVisibility="Collapsed" FalseVisibility="Visible" DefaultVisibility="Visible" />
+            
+            <conv:SelectionModeVisibilityConverter x:Key="sceneVis" VisibleMode="Scene" />
+            <conv:SelectionModeVisibilityConverter x:Key="inputVis" VisibleMode="Input" />
+            <conv:SelectionModeVisibilityConverter x:Key="dspVis" VisibleMode="DSP" />
+            <conv:SelectionModeVisibilityConverter x:Key="zoneVis" VisibleMode="Zone" />
+            <conv:SelectionModeVisibilityConverter x:Key="playVis" VisibleMode="Play" />
+            
+            <Style TargetType="ScrollViewer">
+                <Setter Property="ZoomMode" Value="Disabled" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+

@@ -1,0 +1,89 @@
+﻿<yavc:TransitionPage
+    x:Class="yavc.Phone.StartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:conv="clr-namespace:yavc.Phone.Lib.Util;assembly=yavc.Phone.Lib"
+    xmlns:yavc="clr-namespace:yavc.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    Loaded="PhoneApplicationPage_Loaded"
+    toolkit:TiltEffect.IsTiltEnabled="True"
+    shell:SystemTray.IsVisible="True" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="696" d:DesignWidth="480">
+    <yavc:TransitionPage.Resources>
+        <conv:VisibilityBooleanConverter x:Key="loadedVis"
+                                         TrueVisibility="Collapsed"
+                                         FalseVisibility="Visible"
+                                         DefaultVisibility="Visible" />
+        
+    </yavc:TransitionPage.Resources>
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <yavc:HeaderControl HeaderText="YAMAHA AV CONTROLLER" SubHeaderText="device select" />
+
+        <Grid Grid.Row="1" Margin="12,0">
+            <ListBox x:Name="lbReceivers" ItemsSource="{Binding Devices}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Button Click="ViewDevice_Click" Margin="0,0,0,17" Width="432" BorderThickness="0" Padding="15" 
+                                Background="{StaticResource PhoneAccentBrush}"
+                                Style="{StaticResource clearButtonStyle}" HorizontalContentAlignment="Left">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding FriendlyName}" Style="{StaticResource PhoneTextTitle2Style}" Grid.Column="1" />
+                                <ProgressBar
+                                    Minimum="0" Maximum="1" Grid.Row="1" Grid.Column="1" Width="367"
+                                    IsIndeterminate="{Binding IsIndeterminate}"
+                                    Foreground="{StaticResource PhoneForegroundBrush}"
+                                    Value="{Binding PercentageLoaded}" 
+                                    Visibility="{Binding IsLoaded, Converter={StaticResource loadedVis}}" />
+                                <TextBlock 
+                                    Grid.Row="2" VerticalAlignment="Top" Grid.Column="1" 
+                                    Text="{Binding LoadingMessage}" 
+                                    Foreground="{StaticResource PhoneForegroundBrush}"
+                                    Style="{StaticResource PhoneTextSmallStyle}" 
+                                    Visibility="{Binding IsLoaded, Converter={StaticResource loadedVis}}" />
+
+                                <Image VerticalAlignment="Center" Margin="2,0" 
+                                       Source="{Binding ImageUri, Converter={StaticResource imgConv}}" />
+                            </Grid>
+                            <toolkit:ContextMenuService.ContextMenu>
+                                <toolkit:ContextMenu>
+                                    <toolkit:MenuItem Header="delete" Click="RemoveDevice_Click" Tag="{Binding}" />
+                                    <toolkit:MenuItem Header="pin to Start" Click="PinToStart_Click" Tag="{Binding}" />
+                                </toolkit:ContextMenu>
+                            </toolkit:ContextMenuService.ContextMenu>
+                        </Button>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Grid>
+ 
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Review this app" Click="Review_Click" />
+            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.add.rest.png" Text="Add" Click="AddReceiver_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.sync.rest.png" Text="Refresh" Click="Refresh_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.feature.search.rest.png" Text="Search" Click="Search_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</yavc:TransitionPage>

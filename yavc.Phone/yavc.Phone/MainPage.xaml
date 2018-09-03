@@ -1,0 +1,85 @@
+﻿<yavc:TransitionPage
+    x:Class="yavc.Phone.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:yavc="clr-namespace:yavc.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"
+    toolkit:TiltEffect.IsTiltEnabled="True" 
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+		<DataTemplate x:Key="dtSelectableIcon">
+			<Button Margin="0,0,0,17" Width="432" BorderThickness="0" Padding="5" Click="Select_Click" Tag="{Binding}" HorizontalContentAlignment="Left">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding ImageUri, Converter={StaticResource imgConv}}" MaxHeight="48" MaxWidth="48" 
+                           Tag="{Binding ElementName=back}"
+                           VerticalAlignment="Center" />
+                    <TextBlock Text="{Binding DisplayName}" Grid.Column="1"
+                               Foreground="{Binding IsSelected, Converter={StaticResource colBool}}"
+                               Style="{StaticResource yavcPhoneTextLargeStyle}"/>
+                </Grid>
+			</Button>
+		</DataTemplate>
+		<DataTemplate x:Key="dtSelectableText">
+			<Button Margin="0,0,0,17" Width="432" Padding="5" BorderThickness="0" Click="Select_Click" Tag="{Binding}" HorizontalContentAlignment="Left">
+				<TextBlock Text="{Binding DisplayName}" 
+                           Foreground="{Binding IsSelected, Converter={StaticResource colBool}}"
+                           Style="{StaticResource yavcPhoneTextLargeStyle}"/>
+			</Button>
+		</DataTemplate>
+	</phone:PhoneApplicationPage.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+        <yavc:HeaderControl HeaderText="{Binding Path=FriendlyName}" />
+        
+        <Button Grid.Row="1" 
+                    Click="PickZoneButton_Click"
+                    Content="{Binding SelectedZone}" 
+                    ContentTemplate="{StaticResource dtZoneTemplate}" />
+        
+        <controls:Pivot Grid.Row="2" Margin="0,-30, 0, -12" Foreground="{StaticResource PhoneAccentBrush}" x:Name="thePivot">
+            <controls:PivotItem Header="scene" x:Name="scenesPivot">
+				<ListBox Margin="12,-20,-12,0" 
+                         ItemsSource="{Binding SelectedZone.Scenes}" ItemTemplate="{StaticResource dtSelectableIcon}" />
+			</controls:PivotItem>
+			<controls:PivotItem Header="input">
+				<ListBox Margin="12,-20,-12,0" 
+                        ItemsSource="{Binding SelectedZone.Inputs}" ItemTemplate="{StaticResource dtSelectableIcon}" />
+			</controls:PivotItem>
+			<controls:PivotItem Header="dsp" x:Name="dspPivot">
+                <ListBox Margin="12,-20,-12,0"
+                         ItemsSource="{Binding SelectedZone.DSPs}" ItemTemplate="{StaticResource dtSelectableText}" />
+            </controls:PivotItem>
+            <controls:PivotItem Header="play" x:Name="playPivot">
+                <yavc:PlayControl DataContext="{Binding SelectedZone.Playback}" />
+            </controls:PivotItem>
+		</controls:Pivot>
+
+        <Rectangle Grid.Row="2" Fill="{StaticResource PhoneBackgroundBrush}" Opacity=".5"
+                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                   Visibility="{Binding Converter={StaticResource overlayVisBoolConv}, Path=SelectedZone.IsOn}" />
+        <yavc:VolumeControl x:Name="volControl" Grid.Row="3" IsEnabled="{Binding IsOn}"
+                            DataContext="{Binding SelectedZone.Volume}"
+                            Margin="12,5,12,0" />
+	</Grid>
+</yavc:TransitionPage>

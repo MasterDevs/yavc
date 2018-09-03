@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="yavc.Phone.Controls.HeaderControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    x:Name="hdrCtrl">
+    <StackPanel Margin="0">
+        <Border Background="{StaticResource PhoneAccentBrush}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding ElementName=hdrCtrl, Path=HeaderText}" Style="{StaticResource yavcPhoneTextLargeStyle}" Foreground="White" />
+                <TextBlock Text=" " Style="{StaticResource yavcPhoneTextLargeStyle}" />
+            </StackPanel>
+        </Border>
+        <TextBlock x:Name="subHeader" Visibility="Collapsed"
+                   Text="{Binding ElementName=hdrCtrl, Path=SubHeaderText}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+    </StackPanel>
+</UserControl>

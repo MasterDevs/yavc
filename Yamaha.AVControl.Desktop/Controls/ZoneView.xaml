@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Yamaha.AVControl.Desktop.Controls.ZoneView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:con="clr-namespace:Yamaha.AVControl.Desktop.Controls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Styles\DefaultTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <con:BooleanVisibilityConverter x:Key="bvConv" FalseVisibility="Hidden" TrueVisibility="Visible" />
+            <con:BooleanVisibilityConverter x:Key="invbvConv" FalseVisibility="Visible" TrueVisibility="Collapsed" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Margin="10,0" BorderThickness="0,0,0,2" BorderBrush="{StaticResource LightBlueBorder}" Padding="10">
+            <DockPanel>
+                <Button DockPanel.Dock="Left" ToolTip="{Binding IsOnString}"
+                        Click="Power_Click"
+                        Style="{StaticResource ClearButton}" >
+                    <Grid>
+                        <Image Height="48" Width="48" 
+                               Source="{StaticResource IMG_OFF}" Visibility="{Binding IsOn, Converter={StaticResource invbvConv}}" />
+                        <Image Height="48" Width="48" 
+                               Source="{StaticResource IMG_ON}" Visibility="{Binding IsOn, Converter={StaticResource bvConv}}" />
+                        <Image Height="48" Width="48" 
+                               Source="{StaticResource IMG_ONOFF}" Visibility="{Binding MainVM.IsConnected, Converter={StaticResource invbvConv}}" />
+                    </Grid>
+                </Button>
+                <Button DockPanel.Dock="Right" ToolTip="Refresh" Click="Button_Click"
+                        Style="{StaticResource ClearButton}">
+                    <Image Height="48" Width="48" Source="{StaticResource IMG_REFRESH}" />
+                </Button>
+                <TextBlock Text="{Binding ZoneTitle}" Style="{StaticResource tbHeaderStyle}" />
+            </DockPanel>
+        </Border>
+        <Grid DockPanel.Dock="Bottom">
+            <con:VolumeView DockPanel.Dock="Bottom" IsEnabled="{Binding ElementName=btnOnOff, Path=IsChecked}" DataContext="{Binding Volume}" />
+            <Rectangle Opacity="0.8" Visibility="{Binding IsOn, Converter={StaticResource invbvConv}}"
+                       Fill="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        </Grid>
+        <Grid>
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Image Source="{Binding InputImage}" Height="48" Width="48" HorizontalAlignment="Center" />
+                    <TextBlock Text="{Binding InputTitle}" ToolTip="Input" TextAlignment="Center" FontWeight="Bold" FontSize="18" />
+                    <TextBlock Text="{Binding DSPTitle}" ToolTip="DSP Effect" TextAlignment="Center" FontStyle="Italic" FontSize="16" />
+                </StackPanel>
+                <Image HorizontalAlignment="Center" Source="{Binding ImageUrl}" Margin="0,10" IsEnabled="False" />
+            </DockPanel>
+            <Rectangle Opacity="0.8" Visibility="{Binding IsOn, Converter={StaticResource invbvConv}}"
+                       Fill="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        </Grid>
+    </DockPanel>
+</UserControl>

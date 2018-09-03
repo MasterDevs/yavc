@@ -1,0 +1,7 @@
+<MarketplaceDetails>
+  <SmallAppTile>ApplicationIcon.png</SmallAppTile>
+  <LargeAppTile>Background.png</LargeAppTile>
+  <PCAppTile>
+  </PCAppTile>
+  <ScreenShots>Searching.png;Tile.png;PickZonePin.png;List_Pandora.png;input.png;dsp.png;Play_Pandora.png;Scene.png;</ScreenShots>
+</MarketplaceDetails>

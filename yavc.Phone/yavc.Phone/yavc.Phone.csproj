@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C0F21C0-03C6-4785-BF3E-8FE019C9122D}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>yavc.Phone</RootNamespace>
+    <AssemblyName>yavc.Phone</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>af%3baf-ZA%3bsq%3bsq-AL%3bgsw%3bgsw-FR%3bam%3bam-ET%3bar%3bar-DZ%3bar-BH%3bar-EG%3bar-IQ%3bar-JO%3bar-KW%3bar-LB%3bar-LY%3bar-MA%3bar-OM%3bar-QA%3bar-SA%3bar-SY%3bar-TN%3bar-AE%3bar-YE%3bhy%3bhy-AM%3bas%3bas-IN%3baz%3baz-Cyrl%3baz-Cyrl-AZ%3baz-Latn%3baz-Latn-AZ%3bba%3bba-RU%3beu%3beu-ES%3bbe%3bbe-BY%3bbn%3bbn-BD%3bbn-IN%3bbs%3bbs-Cyrl%3bbs-Cyrl-BA%3bbs-Latn%3bbs-Latn-BA%3bbr%3bbr-FR%3bbg%3bbg-BG%3bca%3bca-ES%3btzm-Tfng-MA%3bku%3bku-Arab%3bku-Arab-IQ%3bchr%3bchr-Cher-US%3bchr-Cher%3bzh%3bzh-Hans%3bzh-CHS%3bzh-CN%3bzh-SG%3bzh-Hant%3bzh-CHT%3bzh-HK%3bzh-MO%3bzh-TW%3bco%3bco-FR%3bhr%3bhr-HR%3bhr-BA%3bcs%3bcs-CZ%3bda%3bda-DK%3bprs%3bprs-AF%3bdv%3bdv-MV%3bnl%3bnl-BE%3bnl-NL%3ben-AU%3ben-BZ%3ben-CA%3ben-029%3ben-IN%3ben-IE%3ben-JM%3ben-MY%3ben-NZ%3ben-PH%3ben-SG%3ben-ZA%3ben-TT%3ben-GB%3ben-US%3ben-ZW%3bet%3bet-EE%3bfo%3bfo-FO%3bfil%3bfil-PH%3bfi%3bfi-FI%3bfr%3bfr-BE%3bfr-CA%3bfr-FR%3bfr-LU%3bfr-MC%3bfr-CH%3bfy%3bfy-NL%3bff%3bff-Latn%3bff-Latn-SN%3bgl%3bgl-ES%3bka%3bka-GE%3bde%3bde-AT%3bde-DE%3bde-LI%3bde-LU%3bde-CH%3bel%3bel-GR%3bkl%3bkl-GL%3bgu%3bgu-IN%3bha%3bha-Latn%3bha-Latn-NG%3bhaw%3bhaw-US%3bhe%3bhe-IL%3bhi%3bhi-IN%3bhu%3bhu-HU%3bis%3bis-IS%3big%3big-NG%3bid%3bid-ID%3biu%3biu-Latn%3biu-Latn-CA%3biu-Cans%3biu-Cans-CA%3b%3bga%3bga-IE%3bxh%3bxh-ZA%3bzu%3bzu-ZA%3bit%3bit-IT%3bit-CH%3bja%3bja-JP%3bkn%3bkn-IN%3bkk%3bkk-KZ%3bkm%3bkm-KH%3bqut%3bqut-GT%3brw%3brw-RW%3bsw%3bsw-KE%3bkok%3bkok-IN%3bko%3bko-KR%3bky%3bky-KG%3blo%3blo-LA%3blv%3blv-LV%3blt%3blt-LT%3bdsb%3bdsb-DE%3blb%3blb-LU%3bmk-MK%3bmk%3bms%3bms-BN%3bms-MY%3bml%3bml-IN%3bmt%3bmt-MT%3bmi%3bmi-NZ%3barn%3barn-CL%3bmr%3bmr-IN%3bmoh%3bmoh-CA%3bmn%3bmn-Cyrl%3bmn-MN%3bmn-Mong%3bmn-Mong-CN%3bne%3bne-NP%3bno%3bnb%3bnn%3bnb-NO%3bnn-NO%3boc%3boc-FR%3bor%3bor-IN%3bps%3bps-AF%3bfa-IR%3bfa%3bpl%3bpl-PL%3bpt%3bpt-BR%3bpt-PT%3bpa%3bpa-Arab%3bpa-IN%3bpa-Arab-PK%3bquz%3bquz-BO%3bquz-EC%3bquz-PE%3bro%3bro-RO%3brm%3brm-CH%3bru%3bru-RU%3bsah%3bsah-RU%3bsmn%3bsmj%3bse%3bsms%3bsma%3bsmn-FI%3bsmj-NO%3bsmj-SE%3bse-FI%3bse-NO%3bse-SE%3bsms-FI%3bsma-NO%3bsma-SE%3bsa%3bsa-IN%3bgd%3bgd-GB%3bsr%3bsr-Cyrl%3bsr-Cyrl-BA%3bsr-Cyrl-ME%3bsr-Cyrl-CS%3bsr-Cyrl-RS%3bsr-Latn%3bsr-Latn-BA%3bsr-Latn-ME%3bsr-Latn-CS%3bsr-Latn-RS%3bnso%3bnso-ZA%3btn%3btn-BW%3btn-ZA%3bsd%3bsd-Arab%3bsd-Arab-PK%3bsi%3bsi-LK%3bsk%3bsk-SK%3bsl%3bsl-SI%3bes%3bes-AR%3bes-VE%3bes-BO%3bes-CL%3bes-CO%3bes-CR%3bes-DO%3bes-EC%3bes-SV%3bes-GT%3bes-HN%3bes-MX%3bes-NI%3bes-PA%3bes-PY%3bes-PE%3bes-PR%3bes-ES%3bes-US%3bes-UY%3bsv%3bsv-FI%3bsv-SE%3bsyr%3bsyr-SY%3btg%3btg-Cyrl%3btg-Cyrl-TJ%3btzm%3btzm-Latn%3btzm-Latn-DZ%3btzm-Tfng%3bta%3bta-IN%3bta-LK%3btt%3btt-RU%3bte%3bte-IN%3bth%3bth-TH%3bbo%3bbo-CN%3bti%3bti-ER%3bti-ET%3btr%3btr-TR%3btk%3btk-TM%3buk%3buk-UA%3bhsb%3bhsb-DE%3bur%3bur-PK%3bug%3bug-CN%3buz%3buz-Cyrl%3buz-Cyrl-UZ%3buz-Latn%3buz-Latn-UZ%3bca-ES-valencia%3bvi%3bvi-VN%3bcy%3bcy-GB%3bwo%3bwo-SN%3bii%3bii-CN%3byo%3byo-NG</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>yavc.Phone.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>yavc.Phone.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <HintPath>..\packages\SilverlightToolkitWP.4.2012.6.25\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddDevicePage.xaml.cs">
+      <DependentUpon>AddDevicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrowsePage.xaml.cs">
+      <DependentUpon>BrowsePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddDevice.xaml.cs">
+      <DependentUpon>AddDevice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BrowseListControl.xaml.cs">
+      <DependentUpon>BrowseListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BrowsePageControl.xaml.cs">
+      <DependentUpon>BrowsePageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HeaderControl.xaml.cs">
+      <DependentUpon>HeaderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlayControl.xaml.cs">
+      <DependentUpon>PlayControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TransitionPage.cs" />
+    <Compile Include="Controls\VolumeControl.xaml.cs">
+      <DependentUpon>VolumeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PickZonePage.xaml.cs">
+      <DependentUpon>PickZonePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="AddDevicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BrowsePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AddDevice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BrowseListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BrowsePageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HeaderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PlayControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VolumeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\appbar.refresh.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PickZonePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.add.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.arrow.up.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.cancel.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.check.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.feature.search.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.lines.horizontal.4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.muted.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.power.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.sync.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.volume.rest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\yavc.Phone.Lib\yavc.Phone.Lib.csproj">
+      <Project>{97CB4CA5-A1F7-420A-952B-4FE6441C8C16}</Project>
+      <Name>yavc.Phone.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

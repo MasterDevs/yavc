@@ -1,0 +1,33 @@
+﻿<UserControl
+    x:Class="yavc.Metro.Controls.PlayInfoControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:yavc.Metro.Controls"
+    x:Name="pic">
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto" DataContext="{Binding SelectedZone.Playback}">
+        <ItemsControl ItemsSource="{Binding Infos}" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="{StaticResource MetroSubtleBrush}" BorderThickness="0,0,0,.5" Padding="7">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="{Binding Key}" HorizontalAlignment="Right" VerticalAlignment="Center"
+                                           Margin="5" 
+                                           Foreground="{StaticResource MetroSubtleBrush}"
+                                           FontSize="{Binding ElementName=pic, Path=MediumFontSize}" />
+
+                            <TextBlock Grid.Column="1"
+                                           Text="{Binding Value}" FontSize="{Binding ElementName=pic, Path=LargeFontSize}"
+                                           VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ScrollViewer>
+</UserControl>

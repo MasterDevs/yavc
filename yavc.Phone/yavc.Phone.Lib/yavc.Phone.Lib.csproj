@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97CB4CA5-A1F7-420A-952B-4FE6441C8C16}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>yavc.Phone.Lib</RootNamespace>
+    <AssemblyName>yavc.Phone.Lib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\yavc.Base\ADeviceFinder.cs">
+      <Link>ADeviceFinder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Controller.cs">
+      <Link>Controller.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\IFindDevice.cs">
+      <Link>IFindDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\IStringHelper.cs">
+      <Link>IStringHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\IUIThread.cs">
+      <Link>IUIThread.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMBrowse.cs">
+      <Link>Models\VMBrowse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\RequestState.cs">
+      <Link>RequestState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\SessionManager.cs">
+      <Link>SessionManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\AFactory.cs">
+      <Link>AFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\ACommand.cs">
+      <Link>Commands\ACommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\AZoneCommand.cs">
+      <Link>Commands\AZoneCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\ICommand.cs">
+      <Link>Commands\ICommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\List\CanList.cs">
+      <Link>Commands\List\CanList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\List\GetList.cs">
+      <Link>Commands\List\GetList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\List\JumpList.cs">
+      <Link>Commands\List\JumpList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\List\ListItem.cs">
+      <Link>Commands\List\ListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\List\ListMenuUp.cs">
+      <Link>Commands\List\ListMenuUp.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\List\ListRequests.cs">
+      <Link>Commands\List\ListRequests.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\List\SelectCurrentListItem.cs">
+      <Link>Commands\List\SelectCurrentListItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\Media\Playback.cs">
+      <Link>Commands\Media\Playback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\Media\PlayInfo.cs">
+      <Link>Commands\Media\PlayInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\Media\Skip.cs">
+      <Link>Commands\Media\Skip.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\PartyMode.cs">
+      <Link>Commands\PartyMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\PureDirect.cs">
+      <Link>Commands\PureDirect.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\RefreshZone.cs">
+      <Link>Commands\RefreshZone.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\RequestInfo.cs">
+      <Link>Commands\RequestInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\SelectInput.cs">
+      <Link>Commands\SelectInput.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\SelectScene.cs">
+      <Link>Commands\SelectScene.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\SelectSurround.cs">
+      <Link>Commands\SelectSurround.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\SendResult.cs">
+      <Link>Commands\SendResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\SystemInfo.cs">
+      <Link>Commands\SystemInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\ToggleMute.cs">
+      <Link>Commands\ToggleMute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\TogglePower.cs">
+      <Link>Commands\TogglePower.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\UpdateVolume.cs">
+      <Link>Commands\UpdateVolume.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\yavcMethod.cs">
+      <Link>Commands\yavcMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Commands\ZoneStatus.cs">
+      <Link>Commands\ZoneStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Data\Device.cs">
+      <Link>Data\Device.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Data\Input.cs">
+      <Link>Data\Input.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Data\Scene.cs">
+      <Link>Data\Scene.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Data\Source.cs">
+      <Link>Data\Source.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Data\Surround.cs">
+      <Link>Data\Surround.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Data\Volume.cs">
+      <Link>Data\Volume.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Data\Zone.cs">
+      <Link>Data\Zone.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Factory.cs">
+      <Link>Factory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\IController.cs">
+      <Link>IController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\IImageCache.cs">
+      <Link>IImageCache.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\IMessageBox.cs">
+      <Link>IMessageBox.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\IProcessRequest.cs">
+      <Link>IProcessRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\ITileService.cs">
+      <Link>ITileService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\IXmlIsoFileStorage.cs">
+      <Link>IXmlIsoFileStorage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\AVM.cs">
+      <Link>Models\AVM.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\SelectionMode.cs">
+      <Link>Models\SelectionMode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMDevice.cs">
+      <Link>Models\VMDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMList.cs">
+      <Link>Models\VMList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMMain.cs">
+      <Link>Models\VMMain.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMPlayback.cs">
+      <Link>Models\VMPlayback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMSelectable.cs">
+      <Link>Models\VMSelectable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMStart.cs">
+      <Link>Models\VMStart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMVolume.cs">
+      <Link>Models\VMVolume.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Models\VMZone.cs">
+      <Link>Models\VMZone.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Parsers\SystemInfoParser.cs">
+      <Link>Parsers\SystemInfoParser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Parsers\ZoneParser.cs">
+      <Link>Parsers\ZoneParser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Util\ANotifiable.cs">
+      <Link>Util\ANotifiable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Util\String.cs">
+      <Link>Util\String.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Util\UriExtensions.cs">
+      <Link>Util\UriExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\yavc.Base\Util\Extensions.cs">
+      <Link>Util\Extensions.cs</Link>
+    </Compile>
+    <Compile Include="BackgroundRequestProcessor.cs" />
+    <Compile Include="PhoneDeviceFinder.cs" />
+    <Compile Include="PhoneFactory.cs" />
+    <Compile Include="PhoneStringHelper.cs" />
+    <Compile Include="PhoneUIThread.cs" />
+    <Compile Include="PhoneXmlIsoFileStore.cs" />
+    <Compile Include="PhoneImageCache.cs" />
+    <Compile Include="PhoneMessageBox.cs" />
+    <Compile Include="PhoneTileService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestProcessor.cs" />
+    <Compile Include="Util\ColorBooleanConverter.cs" />
+    <Compile Include="Util\ImageCacheConverter.cs" />
+    <Compile Include="Util\InverterConverter.cs" />
+    <Compile Include="Util\VisibilityBooleanConverter.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

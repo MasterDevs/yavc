@@ -13,5 +13,5 @@ Official Applications: ([iOS](http://itunes.apple.com/us/app/av-controller-us/id
 
 ## Windows Phone
 
-![ScreenShot01](https://archive.codeplex.com/projects/yavc/ea6d87f6-0215-4e94-a7f9-36ffdfd2619e)
-![ScreenShot02](https://archive.codeplex.com/projects/yavc/85a960df-9bc9-4530-a7b6-2a1ecad4df16)
+![ScreenShot01](/ScreenShots/WP/01.png)
+![ScreenShot02](/ScreenShots/WP/02.png)
